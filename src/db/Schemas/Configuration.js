@@ -1,10 +1,10 @@
 const { Schema, model } = require('mongoose');
 
 const configurationSchema = Schema({
-    userId: String,  // Opcional, si quieres configuraciones personalizadas por usuario
-    defaultCurrency: String,  // "Soles" o "Dólares"
-    defaultRateType: String,  // "Nominal" o "Efectiva"
-    defaultDiscountDateOffset: Number,  // Días predeterminados para la fecha de descuento
+    userId: String,
+    defaultCurrency: String,
+    defaultRateType: String,
+    defaultDiscountDateOffset: Number,
     createdAt: Date,
     updatedAt: Date
 }, {
