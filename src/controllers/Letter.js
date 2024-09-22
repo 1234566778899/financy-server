@@ -19,9 +19,19 @@ const list = async (req, res) => {
         return res.status(500).json({ error: 'Internal Server Error' });
     }
 }
+const deleteLetter = async (req, res) => {
+    try {
+        const { id } = req.params;
+        await Letter.deleteOne({ _id: id });
+        return res.status(200).json({ ok: 'Successful' });
+    } catch (error) {
+        return res.status(500).json({ error: 'Internal Server Error' });
+    }
+}
 
 module.exports = {
     register,
-    list
+    list,
+    deleteLetter
 }
 
