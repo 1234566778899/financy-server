@@ -1,20 +1,17 @@
 const { Schema, model } = require('mongoose');
 
 const LetterSchema = Schema({
-    number: String,
-    issueDate: Date,
-    expirationDate: Date,
-    amount: Number,
-    currency: String,
-    rateType: String,
-    rateCap: Number,
-    rate: Number,
-    capitalization: Number,
-    tcea: Number,
-    userId: String,
+    doc: String,
+    valor: Number,
+    emision: Date,
+    vencimiento: Date,
+    banco: String,
+    tasa: Number,
+    moneda: String,
     admin: Number,
-    transfer: Number,
-    portes: Number
+    transferencia: Number,
+    portes: Number,
+    seguro: Number
 }, {
     timestamps: true
 })

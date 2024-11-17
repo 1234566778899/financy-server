@@ -13,7 +13,7 @@ const register = async (req, res) => {
 
 const list = async (req, res) => {
     try {
-        const letters = await Letter.find();
+        const letters = await Letter.find().sort({ createdAt: -1 });
         return res.status(200).json(letters);
     } catch (error) {
         return res.status(500).json({ error: 'Internal Server Error' });
